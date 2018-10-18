@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ejemplo1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="estilos.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/metodosjs.js"></script>
+        <script type="text/javascript">
+         $(function(){            
+             $("#guardar").on("click", function(){
+                 //guardar();  
+                 guardarVersion2();
+             })
+
+             $("#mostrar").on("click", function(){
+                     mostrar();
+                })
+           
+         })   
+            
+        </script>
+    </head>
+    <body>
+        <div class="divEncabezado">
+            <div class="btnHome" id="home">               
+            </div>
+           
+                <a  href="edit.jsp" id="editPage" target="new">
+                    <div class="btnEdit" id="edit">
+                    </div>
+                </a>
+         
+        </div>
+        
+        <div class="logDivTitulo">
+            <h2 class="h2">
+                Formulario para el registro de alumnos Programación II
+            </h2>
+        </div>
+        <div class="divtotal">
+            <form name="formulario1" id="form1" action="SERVLET2" method="POST">
+                <div class="seccionIzquierda">
+                    <div class="elementoForm">
+                         <input type="text" name="codigo" placeholder="Codigo" id="codigo"> 
+                    </div>
+                    <div class="elementoForm">
+                         <input type="text" name="nombre" placeholder="Nombre" id="nombre"> 
+                    </div>
+                    <div class="elementoForm">
+                         <input type="text" name="apellido" placeholder="apellido" id="apellido"> 
+                    </div>
+                    <div class="elementoForm">
+                         <input type="text" name="direccion" placeholder="direccion" id="direccion"> 
+                    </div>
+                     <div class="elementoForm">
+                         <select name="opciones" id="opciones">
+                             <option value="1"> Seleccione opcion .. </option>
+                             <option value="2">Opcion 1</option>
+                             <option value="3">Opcion 2</option>
+                         </select>
+                      </div>
+                     <div class="botonIzquierda">
+                           <input type="button" name="guardar" value="Guardar" id="guardar"><br>
+                     </div>
+                     <div class="botonDerecha">
+                           <input type="button" name="mostrar" value="Mostrar" id="mostrar"><br>
+                     </div>
+                 </div>
+                <div class="seccionDerecha" id="tablaDerecha">
+                    <table style="width: 100%; min-height:  40%; border-bottom: 1px solid blue;border-top: 1px solid blue;font-family: sans-serif; font-size: medium;">
+                        <thead>
+                            <tr>
+                                <th>Codigo</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                             </tr>
+                        </thead>
+                        <tbody id="tablaAlumnos" class="tablaAlumnos" >
+                            
+                        </tbody>
+                    </table>
+
+                </div>
+            </form>
+            
+            
+            <div style="width: 100%; min-height: 50px; float: left;">
+                <div class="divrespuesta" style="height: 100px;" id="respuesta">
+                    <div class="exito" id="exito">
+                        Guardado Exitosamente
+                    </div>
+                    <div class="error" id="MensajeError">
+                    Error al insertar
+                    </div>
+                </div>                
+            </div>
+        </div>   
+       
+        
+        
+    </body>
+</html>
